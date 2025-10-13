@@ -27,22 +27,3 @@ end
 
 puts "Usuários criados."
 puts "Criando quotes e line item dates..."
-
-quote1_kpmg = Quote.find_or_create_by!(name: "Primeira cotação da KPMG", company: kpmg)
-LineItemDate.find_or_create_by!(quote: quote1_kpmg, date: Date.today)
-LineItemDate.find_or_create_by!(quote: quote1_kpmg, date: Date.today + 1.day)
-
-quote2_kpmg = Quote.find_or_create_by!(name: "Segunda cotação da KPMG", company: kpmg)
-LineItemDate.find_or_create_by!(quote: quote2_kpmg, date: Date.today + 2.days)
-LineItemDate.find_or_create_by!(quote: quote2_kpmg, date: Date.today + 3.days)
-
-quote1_pwc = Quote.find_or_create_by!(name: "Primeira cotação da PwC", company: pwc)
-LineItemDate.find_or_create_by!(quote: quote1_pwc, date: Date.today)
-LineItemDate.find_or_create_by!(quote: quote1_pwc, date: Date.today + 1.day)
-
-quote2_pwc = Quote.find_or_create_by!(name: "Segunda cotação da PwC", company: pwc)
-LineItemDate.find_or_create_by!(quote: quote2_pwc, date: Date.today + 2.days)
-LineItemDate.find_or_create_by!(quote: quote2_pwc, date: Date.today + 3.days)
-
-puts "Quotes e line item dates criados."
-puts "Seeding finalizado."
