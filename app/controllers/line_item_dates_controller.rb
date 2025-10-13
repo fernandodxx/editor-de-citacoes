@@ -24,8 +24,8 @@ class LineItemDatesController < ApplicationController
 
   def update
     if @line_item_date.update(line_item_date_params)
-      respond_to do |format| 
-        format.html {redirect_to quote_path(@quote), notice: "Date was successfully updated."}
+      respond_to do |format|
+        format.html { redirect_to quote_path(@quote), notice: "Date was successfully updated." }
         format.turbo_stream { flash.now[:notice] = "Date was successfully updated." }
       end
     else
@@ -55,5 +55,4 @@ class LineItemDatesController < ApplicationController
   def set_line_item_date
     @line_item_date = @quote.line_item_dates.find(params[:id])
   end
-
 end
